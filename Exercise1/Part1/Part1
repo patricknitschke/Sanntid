@@ -1,0 +1,28 @@
+What if the software controlling one of the elevators suddenly crashes?
+
+Has to have a method of detecting crash and method to reboot.
+
+
+What if it doesn't crash, but hangs?
+
+Timer of some sort, no reply? Reboot.
+
+
+What if a message between machines is lost?
+
+Should not happen, but resend message. 
+
+
+What if the network cable is suddenly disconnected? Then re-connected?
+
+Orders and current state should not be lost. Saved to another PC.
+
+
+What if a user of the system is being a troll?
+
+System should be robust enough to handle it.
+
+
+What if the elevator car never arrives at its destination?
+
+Reboot the system?
