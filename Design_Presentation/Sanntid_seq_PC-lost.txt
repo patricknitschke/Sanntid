@@ -1,0 +1,29 @@
+title Error Handling - PC Lost
+
+[->Heis1:Incoming order
+activate Heis1
+Heis1->Heis1:Sample_costs
+activate Heis1
+
+Heis1->>Heis2:ping_cost()
+Heis1-->Heis1_Watchdog:
+
+Heis1->>Heis3:ping_cost()
+
+
+
+
+
+Heis1<--Heis2:order_cost_val
+Heis1<--Heis3:order_cost_val
+deactivate Heis1
+
+Heis1->Heis1:Decide()
+activate Heis1
+Heis1->Heis3:serve_order_n_wait()
+space
+destroy Heis3
+space2
+deactivate Heis1
+
+
